@@ -59,13 +59,23 @@ function Home() {
     }
   };
 
+  const func=()=>{
+    const navLinks = document.querySelector(".nav-links");
+    const links = document.querySelectorAll(".nav-links li");
+
+      navLinks.classList.toggle("open");
+      links.forEach((link) => {
+        link.classList.toggle("fade");
+      });
+  };
+
   window.addEventListener("scroll", change);
   return (
     <div className="container">
       <div className="landing" id="home">
         <nav className={navbar ? "navbar active" : "navbar"}>
           <img src={IMG} alt="logo" className="logo" />
-          <div className="hamburger">
+          <div className="hamburger" onClick={func}>
             <div className="line"></div>
             <div className="line"></div>
             <div className="line"></div>
@@ -88,6 +98,11 @@ function Home() {
             </li>
           </ul>
         </nav>
+        {/* <div className={​​`hamburger ${​​menuOpen ? 'open' : ''}​​`} ​​onClick={​​onClick}​​>
+<div className='line1' />
+<div className='line2' />
+<div className='line3' />
+</div> */}
         <section>
           <img src={DL} className="design-left" />
           <img src={DR} className="design-right" />
