@@ -1,0 +1,159 @@
+* {
+  font-family: "Merriweather",serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 25px;
+  scroll-behavior: smooth;
+}
+.container{
+  display: flex;
+  flex-direction: column;
+}
+
+.design-left{
+  position: relative;
+  top: 73px;
+}
+.design-right{
+  position: relative;
+  top: 180px;
+  right:0px
+}
+
+section{
+  width: 100%;
+  height: 100vh;
+  background-color: #0d1728;
+  /* width: 100%;
+  height: 100vh;
+  background-image: url("../Images/landing-image.png");
+  background-size: cover;
+  background-position: center;
+  filter: brightness(50%);
+  z-index: -1; */
+} 
+.navbar.active{
+  background :  #0d1728;
+  border-bottom: #fff;
+  border-radius: 5px;
+}
+.navbar {
+  position: fixed;
+  top: 0;
+  width: calc(100vw - 52px);
+  height: 70px;
+  padding : 15px 26px;
+  background-color: transparent;
+  z-index: 1;
+  transition: all .3s ease-in;
+}
+nav ul {
+  float: right;
+  margin-right: 30px;
+
+}
+nav ul li {
+  list-style-type: none;
+  display: inline-block;
+  transition: 0.7s all;
+}
+nav ul li:hover {
+  background-color: #0005;
+}
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  padding: 30px;
+  width: 107px;
+  height: 56px;
+  font-size: 20px;
+}
+.nav-links{
+  display: flex;
+}
+@media screen and (max-width:1100px){
+  .line{
+    width: 30px;
+    height: 3px;
+    background: white;
+    margin: 5px;
+  }
+  nav{
+    position: relative;
+  }
+  .hamburger{
+    position: absolute;
+    cursor: pointer;
+    right: 5%;
+    top: 50%;
+    transform: translate(-5%,50%);
+  }
+  .nav-links{
+    position: fixed;
+    background: #0d1728;
+    height: 50%;
+    width: 90%;
+    float: right;
+    flex-direction: column;
+    right: 5%;
+    display: none;
+  }
+}
+.logo {
+  float: left;
+  padding: 4px;
+  width: 268.5px;
+  height: 65px;
+}
+.about-us {
+  width: 100%;
+  height: 1886px;
+  background-color: #0e1728;
+}
+#a{
+  color: #e28f45;
+  text-align: center;
+  padding-top:136px ;
+  padding-bottom: 0px;
+  margin: 0px;
+  font-size: 76px;
+}
+#pa{
+  color: white;
+  text-align: center;
+  padding: 50px 264px 87px 266px;
+  font-size: 32px;
+}
+#epa{
+  color: white;
+  text-align: center;
+  padding: 5px 264px 87px 266px;
+  font-size: 32px;
+}
+.counter{
+  width: 100%;
+  height: 147px;
+  display: flex;
+  flex-direction: row;
+  background: #E39046;
+}
+.count{
+  width: 100%;
+  height: 147px;
+  color: #fff;
+  text-align: center;
+}
+.speaker{
+  width: 100%;
+  height: 2086px;
+  background-color: #fff;
+}
+#s{
+  color: #e28f45;
+  background-color: #0d1728;
+  text-align: center;
+  padding-top:136px ;
+  padding-bottom: 30px;
+  margin: 0px;
+  font-size: 76px;
+}
