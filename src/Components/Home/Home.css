@@ -12,7 +12,7 @@
   flex-direction: column;
 }
 .landing {
-  height: 103vh;
+  height: 102vh;
 }
 .design-left {
   width: auto;
@@ -56,8 +56,8 @@ section {
 .logo {
   float: left;
   padding: 4px;
-  width: 268.5px;
-  height: 65px;
+  width: 240px;
+  height: 60px;
 }
 
 .about-us {
@@ -247,7 +247,11 @@ section {
   height: 147px;
   color: #fff;
   text-align: center;
-  font-size: 15px;
+  margin-top: 15px;
+  padding: 0px 5px 0px 2px;
+}
+.count p{
+  font-size: 20px;
 }
 .speaker {
   width: 100%;
