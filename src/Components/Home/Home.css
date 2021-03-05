@@ -11,7 +11,7 @@
   display: flex;
   flex-direction: column;
 }
-.landing{
+.landing {
   height: 103vh;
 }
 .design-left {
@@ -36,9 +36,16 @@
   object-fit: contain;
   padding-bottom: 24px;
 }
+@media screen and (max-width: 768px) {
+  .design-left,
+  .design-right {
+    display: none;
+  }
+}
 .scroll-button:hover {
   cursor: pointer;
 }
+
 section {
   width: 100%;
   height: 100vh;
@@ -61,7 +68,6 @@ section {
 
 .ecell {
   width: 100%;
-  /* height: 3000px; */
   position: relative;
   display: inline-block;
 }
@@ -146,6 +152,109 @@ section {
   text-align: left;
   padding: 10px 110px 50px 195px;
   font-size: 20px;
+}
+@media screen and (max-width: 600px) {
+  /* .ecell #a {
+    color: #e28f45;
+    text-align: center;
+    padding-top: 136px;
+    padding-top: 136px;
+    padding-bottom: 0px;
+    margin: 0px;
+    font-size: 31px;
+    transform: none;
+  }
+
+  #pa {
+    color: white;
+    text-align: center;
+    padding: 50px 264px 87px 266px;
+    font-size: 20px;
+  }
+
+  #epa {
+    color: white;
+    text-align: center;
+    padding: 5px 264px 87px 266px;
+    font-size: 20px;
+  } */
+  
+  .ecell #a {
+    color: #fff;
+    font-size: 31px;
+    font-weight: 900;
+    width: 100%;
+    position:unset;
+    text-align: center;
+    padding: 50px 0px 20px 0px;
+    top: auto;
+    left: auto;
+    right: auto;  
+    bottom: auto;
+    margin: 0px;
+    transform: none;
+  }
+  .esummit #a {
+    color: #fff;
+    font-size: 31px;
+    font-weight: 900;
+    width: 100%;
+    position:unset;
+    text-align: center;
+    padding: 50px 0px 20px 0px;
+    top: auto;
+    left: auto;
+    right: auto;  
+    bottom: auto;
+    margin: 0px;
+    transform: none;
+  }
+  /* .ecell .vertical-line {
+  border-left: 3px solid #e28f45;
+  height: 105px;
+  position: absolute;
+  left: 160px;
+  right: 20px;
+  top: 100px;
+}
+.esummit .vertical-line {
+  border-left: 3px solid #e28f45;
+  height: 165px;
+  position: absolute;
+  left: 160px;
+  right: 20px;
+  top: 125px;
+} */
+  .vertical-line {
+    display: none;
+  }
+  .ecell #pa {
+    max-width: 80%;
+    max-height: 80%;
+    color: white;
+    padding: 10px 50px 0px 50px;
+    font-size: 20px;
+    margin: 0px;
+    text-align: center;
+  }
+  .esummit #pa {
+    max-width: 80%;
+    max-height: 80%;
+    color: white;
+    padding: 10px 50px 10px 50px;
+    font-size: 20px;
+    margin: 0px;
+    text-align: center;
+  }
+  .esummit #epa {
+    max-width: 80%;
+    max-height: 80%;
+    color: white;
+    padding: 10px 50px 50px 50px;
+    font-size: 20px;
+    margin: 0px;
+    text-align: center;
+  }
 }
 .counter {
   width: 100%;
@@ -320,6 +429,7 @@ ul {
 .list-wrapper {
   position: relative;
   background: #e39046;
+  height: 1561px;
 }
 .list-item-wrapper {
   margin-top: 10px;
@@ -354,7 +464,8 @@ ul {
 .black-line {
   background: black;
   width: 9px;
-  height: 75%;
+  max-height: 1440px;
+  height: 100%;
   position: absolute;
   margin-left: 90px;
 }
