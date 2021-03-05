@@ -59,6 +59,7 @@ section {
   width: 268.5px;
   height: 65px;
 }
+
 .about-us {
   width: 100%;
   background-color: #0c1627;
@@ -70,6 +71,9 @@ section {
   width: 100%;
   position: relative;
   display: inline-block;
+}
+#pa {
+  text-align: justify;
 }
 .esummit {
   width: 100%;
@@ -154,42 +158,17 @@ section {
   font-size: 20px;
 }
 @media screen and (max-width: 600px) {
-  /* .ecell #a {
-    color: #e28f45;
-    text-align: center;
-    padding-top: 136px;
-    padding-top: 136px;
-    padding-bottom: 0px;
-    margin: 0px;
-    font-size: 31px;
-    transform: none;
-  }
-
-  #pa {
-    color: white;
-    text-align: center;
-    padding: 50px 264px 87px 266px;
-    font-size: 20px;
-  }
-
-  #epa {
-    color: white;
-    text-align: center;
-    padding: 5px 264px 87px 266px;
-    font-size: 20px;
-  } */
-  
   .ecell #a {
     color: #fff;
     font-size: 31px;
     font-weight: 900;
     width: 100%;
-    position:unset;
+    position: unset;
     text-align: center;
     padding: 50px 0px 20px 0px;
     top: auto;
     left: auto;
-    right: auto;  
+    right: auto;
     bottom: auto;
     margin: 0px;
     transform: none;
@@ -199,12 +178,12 @@ section {
     font-size: 31px;
     font-weight: 900;
     width: 100%;
-    position:unset;
+    position: unset;
     text-align: center;
     padding: 50px 0px 20px 0px;
     top: auto;
     left: auto;
-    right: auto;  
+    right: auto;
     bottom: auto;
     margin: 0px;
     transform: none;
@@ -268,6 +247,7 @@ section {
   height: 147px;
   color: #fff;
   text-align: center;
+  font-size: 15px;
 }
 .speaker {
   width: 100%;
@@ -324,6 +304,7 @@ ul {
 .nav {
   padding: 0 15px;
 }
+
 .logo a {
   font-size: 30px;
   color: #ffffff;
@@ -429,7 +410,6 @@ ul {
 .list-wrapper {
   position: relative;
   background: #e39046;
-  height: 1561px;
 }
 .list-item-wrapper {
   margin-top: 10px;
@@ -459,17 +439,43 @@ ul {
 }
 .list-text {
   font-weight: 400;
-  padding: 80px;
+  padding: 40px;
 }
 .black-line {
   background: black;
   width: 9px;
-  max-height: 1440px;
-  height: 100%;
+  height: 73%;
   position: absolute;
   margin-left: 90px;
 }
-
+@media screen and (max-width: 450px) {
+  .black-line {
+    background: black;
+    width: 9px;
+    height: 74%;
+    position: absolute;
+    margin-left: 45px;
+  }
+  .list-bullet {
+    float: left;
+    margin-right: 20px;
+    background: #e39046;
+    height: 44px;
+    width: 44px;
+    z-index: 4;
+    line-height: 30px;
+    border-radius: 100px;
+    font-weight: 700;
+    color: white;
+    text-align: center;
+    margin-left: 28px;
+    box-shadow: inset 0 0 0 9px black;
+  }
+  .list-text {
+    font-size: 20px;
+    padding: 20px 30px 20px 0px;
+  }
+}
 /* .yellow-line {
   background:#e39046;
   top:0px;
@@ -479,3 +485,50 @@ ul {
   position:absolute;
   margin-left: 90px;
 } */
+
+.past-sponsors {
+  background: #0c1627;
+}
+.past-sponsors-text {
+  font-weight: 900;
+  font-size: 45px;
+  text-align: center;
+  color: white;
+  font-family: "Roboto", sans-serif;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 10px;
+  grid-gap: 50px 100px;
+}
+.grid-item {
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+}
+@media screen and (max-width: 665px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: auto;
+    padding: 10px;
+    grid-gap: 50px 100px;
+  }
+}
+.registration{
+  background: #e39046;
+}
+.reg-head{
+  font-weight: 900;
+  font-size: 45px;
+  text-align: center;
+  color: black;
+  font-family: "Roboto", sans-serif;
+}
+.reg-para{
+  font-style: normal;
+font-weight: 900;
+font-size: 20px;
+line-height: 23px;
+text-align: center;
+}

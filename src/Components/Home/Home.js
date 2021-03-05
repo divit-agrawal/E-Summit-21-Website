@@ -7,8 +7,7 @@ import IMG from "../Images/logo.png";
 import DL from "../Images/design-left.png";
 import DR from "../Images/design-right.png";
 import BU from "../Images/scrolldown.png";
-import { Helmet } from "react-helmet";
-
+import CC from "../Images/coca-cola-logo.png";
 function Home() {
   const { countUp: countUp1, start: start1 } = useCountUp({
     start: "0",
@@ -90,7 +89,7 @@ function Home() {
                     <a href="#">Speakers</a>
                   </li>
                   <li>
-                    <a href="#">Sponsors</a>
+                    <a href="#sponsors">Sponsors</a>
                   </li>
                 </ul>
               </nav>
@@ -101,13 +100,14 @@ function Home() {
           <img src={DL} className="design-left" />
           <img src={DR} className="design-right" />
           <a href="#stats">
-            <img src={BU} className="scroll-button"/></a>
+            <img src={BU} className="scroll-button" />
+          </a>
         </section>
       </div>
       <div className="counter" id="stats">
         <div className="count">
           <p>{countUp1}</p>
-          <p>days</p>
+          <p>Days</p>
         </div>
         <div className="count">
           <p>{countUp2}+</p>
@@ -119,7 +119,7 @@ function Home() {
         </div>
         <div className="count">
           <p>{countUp4}+</p>
-          <p>participants</p>
+          <p>Participants</p>
         </div>
       </div>
       <div className="about-us" id="about">
@@ -225,7 +225,25 @@ function Home() {
           <div class="yellow-line"></div>
         </div>
       </div>
-      <div></div>
+      <div className="past-sponsors" id="sponsors">
+        <h1 className="past-sponsors-text">Past Sponsors</h1>
+        <div class="grid-container">
+          <div class="grid-item">
+            <img src={CC} />
+          </div>
+          <div class="grid-item"></div>
+          <div class="grid-item"></div>
+          <div class="grid-item"></div>
+          <div class="grid-item"></div>
+          <div class="grid-item"></div>
+        </div>
+      </div>
+      <div className="registration">
+        <h1 className="reg-head">Register Now !</h1>
+        <p className="reg-para">
+          Registrations opening soon.
+        </p>
+      </div>
     </div>
   );
 }
