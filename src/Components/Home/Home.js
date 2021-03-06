@@ -8,6 +8,12 @@ import DL from "../Images/design-left.png";
 import DR from "../Images/design-right.png";
 import BU from "../Images/scrolldown.png";
 import CC from "../Images/coca-cola-logo.png";
+import TwitterIcon from "@material-ui/icons/Twitter";
+import FacebookIcon from "@material-ui/icons/Facebook";
+import LinkedInIcon from "@material-ui/icons/LinkedIn";
+import InstagramIcon from "@material-ui/icons/Instagram";
+import MailIcon from "@material-ui/icons/Mail";
+
 function Home() {
   const { countUp: countUp1, start: start1 } = useCountUp({
     start: "0",
@@ -98,6 +104,10 @@ function Home() {
         </div>
         <section>
           <img src={DL} className="design-left" />
+          <div className="col-12">
+            <span className="iia">E-Summit 2021</span>
+            <span className="vit">by E-cell VIT</span>
+          </div>
           <img src={DR} className="design-right" />
           <a href="#stats">
             <img src={BU} className="scroll-button" />
@@ -106,19 +116,19 @@ function Home() {
       </div>
       <div className="counter" id="stats">
         <div className="count">
-          <p>{countUp1}</p>
+          <p className="color">{countUp1}</p>
           <p>Days</p>
         </div>
         <div className="count">
-          <p>{countUp2}+</p>
+          <p className="color">{countUp2}+</p>
           <p>Events</p>
         </div>
         <div className="count">
-          <p>{countUp3}+</p>
+          <p className="color">{countUp3}+</p>
           <p>Speakers</p>
         </div>
         <div className="count">
-          <p>{countUp4}+</p>
+          <p className="color">{countUp4}+</p>
           <p>Participants</p>
         </div>
       </div>
@@ -240,9 +250,51 @@ function Home() {
       </div>
       <div className="registration">
         <h1 className="reg-head">Register Now !</h1>
-        <p className="reg-para">
-          Registrations opening soon.
-        </p>
+        <p className="reg-para">Registrations opening soon.</p>
+      </div>
+      <div className="footer">
+        <div className="footer-item">
+          <img src={IMG} alt="E-summit VIT" />
+        </div>
+        <div className="footer-item">
+          <span className="iia">IDEATE. INNOVATE. ACTUATE.</span>
+        </div>
+        <div className="footer-item">
+          <a href="mailto:helloecellvit@gmail.com">helloecellvit@gmail.com</a>
+        </div>
+        <div className="footer-item">
+          <a href="tel:+919971523455">+919971523455</a>
+        </div>
+        {/* <Social position="bottom" /> */}
+        <div className="bottom">
+          <div style={{ display: "block" }}>
+            <a href="https://twitter.com/ecell_vit">
+              <span>
+                <TwitterIcon />
+              </span>
+            </a>
+            <a href="https://www.facebook.com/ecellvit">
+              <span>
+                <FacebookIcon />
+              </span>
+            </a>
+            <a href="https://www.linkedin.com/company/ecellvitvellore">
+              <span>
+                <LinkedInIcon />
+              </span>
+            </a>
+            <a href="https://medium.com/e-cell-vit">
+              <span>
+                <MailIcon />
+              </span>
+            </a>
+            <a href="https://www.instagram.com/ecell_vit">
+              <span>
+                <InstagramIcon />
+              </span>
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   );
