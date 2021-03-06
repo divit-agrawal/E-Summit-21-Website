@@ -99,7 +99,7 @@ section {
   display: inline-block;
 }
 #pa {
-  text-align: justify;
+  text-align: left;
 }
 .esummit {
   width: 100%;
@@ -206,7 +206,7 @@ section {
     width: 100%;
     position: unset;
     text-align: center;
-    padding: 50px 0px 20px 0px;
+    padding: 20px 0px 20px 0px;
     top: auto;
     left: auto;
     right: auto;
@@ -214,22 +214,7 @@ section {
     margin: 0px;
     transform: none;
   }
-  /* .ecell .vertical-line {
-  border-left: 3px solid #e28f45;
-  height: 105px;
-  position: absolute;
-  left: 160px;
-  right: 20px;
-  top: 100px;
-}
-.esummit .vertical-line {
-  border-left: 3px solid #e28f45;
-  height: 165px;
-  position: absolute;
-  left: 160px;
-  right: 20px;
-  top: 125px;
-} */
+
   .vertical-line {
     display: none;
   }
@@ -240,7 +225,7 @@ section {
     padding: 10px 50px 0px 50px;
     font-size: 20px;
     margin: 0px;
-    text-align: center;
+    text-align: justify;
   }
   .esummit #pa {
     max-width: 80%;
@@ -249,7 +234,7 @@ section {
     padding: 10px 50px 10px 50px;
     font-size: 20px;
     margin: 0px;
-    text-align: center;
+    text-align: justify;
   }
   .esummit #epa {
     max-width: 80%;
@@ -258,7 +243,7 @@ section {
     padding: 10px 50px 50px 50px;
     font-size: 20px;
     margin: 0px;
-    text-align: center;
+    text-align: justify;
   }
 }
 .counter {
@@ -613,9 +598,8 @@ ul {
   padding: 0px;
 }
 .footer .iia {
-  color: #8143fa;
-  font-size: 2vw;
-  margin: 1.3rem 0;
+  color: white;
+  font-size: 1.5vw;
 }
 @media (max-width: 900px) {
   .footer img {
@@ -623,7 +607,7 @@ ul {
     padding: 0px;
   }
   .footer .iia {
-    font-size: 3vw;
+    font-size: 2vw;
   }
   .footer a {
     font-size: 2.8vw;
@@ -635,7 +619,7 @@ ul {
     height: 14vw;
   }
   .footer .iia {
-    font-size: 4vw;
+    font-size: 3vw;
   }
   .footer a {
     font-size: 3.8vw;
@@ -710,7 +694,7 @@ ul {
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 768px) {
   .iia {
     font-size: 9vw;
   }
