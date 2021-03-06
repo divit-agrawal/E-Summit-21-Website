@@ -149,7 +149,7 @@ function Home() {
         </div>
         <div className="esummit">
           <h2 data-aos="fade-up" data-aos-offset="-20" id="a">
-            About E-summit
+            About E-Summit
           </h2>
           <div className="vertical-line"></div>
           <p data-aos="zoom-in" data-aos-offset="-20" id="pa">
