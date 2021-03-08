@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./Home.css";
+import Card from "../Card/Card";
 import Aos from "aos";
 import { useCountUp } from "react-countup";
 import "aos/dist/aos.css";
@@ -8,11 +9,17 @@ import DL from "../Images/design-left.png";
 import DR from "../Images/design-right.png";
 import BU from "../Images/scrolldown.png";
 import CC from "../Images/coca-cola-logo.png";
+import P from "../Images/paytm.png";
+import SC from "../Images/snapchat.png";
+import SP from "../Images/spotify.png";
+import IX from "../Images/ixigo.png";
+import JB from "../Images/jetbrains.png";
 import TwitterIcon from "@material-ui/icons/Twitter";
 import FacebookIcon from "@material-ui/icons/Facebook";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import InstagramIcon from "@material-ui/icons/Instagram";
 import MailIcon from "@material-ui/icons/Mail";
+import Slider from "react-slick";
 
 function Home() {
   const { countUp: countUp1, start: start1 } = useCountUp({
@@ -21,6 +28,35 @@ function Home() {
     end: "5",
     startOnMount: false,
   });
+  const settings = {
+    className: "center",
+    centerMode: true,
+    infinite: true,
+    autoplay: true,
+    centerPadding: "60px",
+    slidesToShow: 3,
+    speed: 500,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          arrows: false,
+          centerMode: true,
+          centerPadding: "40px",
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          arrows: false,
+          centerMode: true,
+          centerPadding: "40px",
+          slidesToShow: 2,
+        },
+      },
+    ],
+  };
 
   const { countUp: countUp2, start: start2 } = useCountUp({
     start: "0",
@@ -52,7 +88,6 @@ function Home() {
       start2();
       start3();
       start4();
-      // window.removeEventListener("scroll", handleScroll);
     }
   };
 
@@ -110,7 +145,8 @@ function Home() {
           </div>
           <img src={DR} className="design-right" />
           <a href="#stats">
-            <img src={BU} className="scroll-button" />
+            <div className="scroll-down"></div>
+            <div className="scroll-down2"></div>
           </a>
         </section>
       </div>
@@ -149,7 +185,7 @@ function Home() {
         </div>
         <div className="esummit">
           <h2 data-aos="fade-up" data-aos-offset="-20" id="a">
-            About E-Summit
+            About ESummit
           </h2>
           <div className="vertical-line"></div>
           <p data-aos="zoom-in" data-aos-offset="-20" id="pa">
@@ -169,83 +205,133 @@ function Home() {
 
       <div class="list-wrapper">
         <div id="events">
-          <h1 className="events-head">Events</h1>
+          <h1 data-aos="fade-in" data-aos-offset="-2" className="events-head">
+            Events
+          </h1>
         </div>
         <div class="black-line"></div>
         <div class="list-item-wrapper">
           <div class="list-bullet"></div>
 
           <div class="list-item">
-            <div class="list-title">This is the top item</div>
-            <div class="list-text">
-              The parallels with the alcoholic republic of two hundred years ago
-              are hard to miss. Before the changes in lifestyle, before the
-              clever marketing, comes the mountain of cheap corn.{" "}
+            <div class="list-title">29th April -- E-Talk</div>
+            <div data-aos="zoom-in" data-aos-offset="-20" class="list-text">
+              Prominent motivational speakers from the entrepreneurial
+              environment will be delivering a talk to inspire the students and
+              promote the ethos of entrepreneurship in the campus. This session
+              will also be open to questions from the audience, thus furnishing
+              the minds of the students with vivid ideas and a clearer picture
+              of the entrepreneurship realm.
             </div>
           </div>
         </div>
         <div class="list-item-wrapper">
           <div class="list-bullet"></div>
           <div class="list-item">
-            <div class="list-title">This is an item</div>
-            <div class="list-text">
-              But the outcome of our national drinking binge is not nearly as
-              relevant to our own situation as its underlying cause. Which, put
-              simply, was this: American farmers were producing far too much
-              corn.{" "}
+            <div class="list-title">30th April -- VisionX</div>
+            <div data-aos="zoom-in" data-aos-offset="-20" class="list-text">
+              Startups are only half as innovative if they fail to understand
+              the intricacies of their domain. To ensure that startups realise
+              their true potential, VisionX nurtures young minds to incorporate
+              technical concepts in their business models.
             </div>
           </div>
         </div>
         <div class="list-item-wrapper">
           <div class="list-bullet"></div>
           <div class="list-item">
-            <div class="list-title">This is an item</div>
-            <div class="list-text">
-              But the outcome of our national drinking binge is not nearly as
-              relevant to our own situation as its underlying cause. Which, put
-              simply, was this: American farmers were producing far too much
-              corn.{" "}
+            <div class="list-title">30th April -- Business workshop</div>
+            <div data-aos="zoom-in" data-aos-offset="-20" class="list-text">
+              The Business workshop of E-Summit brings with it the innate
+              opportunity to discover the nuts and bolts of the startup world
+              and explore various business avenues.
             </div>
           </div>
         </div>
         <div class="list-item-wrapper">
           <div class="list-bullet"></div>
           <div class="list-item">
-            <div class="list-title">This is an item</div>
-            <div class="list-text">
-              But the outcome of our national drinking binge is not nearly as
-              relevant to our own situation as its underlying cause. Which, put
-              simply, was this: American farmers were producing far too much
-              corn.{" "}
+            <div class="list-title">30th April - overnight -- E-Hack</div>
+            <div data-aos="zoom-in" data-aos-offset="-20" class="list-text">
+              A test of grit, resilience and innovation, E-Hack is an overnight
+              Hackathon that challenges participants to come up with effective
+              solutions to real-world problems.
             </div>
           </div>
         </div>
         <div class="list-item-wrapper">
           <div class="list-bullet"></div>
           <div class="list-item">
-            <div class="list-title">This is the bottom item</div>
-            <div class="list-text">
-              In the early years of the nineteenth century, Americans began
-              drinking more than they ever had before or since, embarking on a
-              collective bender that confronted the young republic with its
-              first major public health crisis -- the obesity epidemic of its
-              day.{" "}
+            <div class="list-title">1st May -- Med-Tech Challenge</div>
+            <div data-aos="zoom-in" data-aos-offset="-20" class="list-text">
+              Med-Tech challenge is a pitching competition that invites people
+              to come up with ideas or prototypes capable of producing an
+              impactful change in the medical sector. Visionary ideas with
+              worthy pitches get incubation under VIT Technology Business
+              Incubator.
             </div>
           </div>
-          <div class="yellow-line"></div>
+        </div>
+        <div class="list-item-wrapper">
+          <div class="list-bullet"></div>
+          <div class="list-item">
+            <div class="list-title">1st May -- Innoventure</div>
+            <div data-aos="zoom-in" data-aos-offset="-20" class="list-text">
+              Innoventure is a business simulation which gives the participants
+              an entrepreneurial ecosystem and platform to develop skills like
+              product development, business analysis, inculcate knowledge about
+              the trends in the current market and economic concepts like
+              taxation which prevail important applications in day to day lives.
+            </div>
+          </div>
+        </div>
+        <div class="list-item-wrapper">
+          <div class="list-bullet"></div>
+          <div class="list-item">
+            <div class="list-title">1st May -- Start-Up Internship Expo</div>
+            <div data-aos="zoom-in" data-aos-offset="-20" class="list-text">
+              Start-up Internship Expo will provide students with the chance of
+              landing their dream internships. Major startups from all over
+              India will become a part of this motion by providing exciting
+              internship offers to bright minds, allowing them to enrich
+              themselves with wisdom and knowledge of the real world.
+            </div>
+          </div>
         </div>
       </div>
+
+      {/* <div className="image-slider">
+        <Slider {...settings}>
+          <Card />
+          <Card />
+          <Card />
+          <Card />
+          <Card />
+          <Card />
+        </Slider>
+      </div> */}
+
       <div className="past-sponsors" id="sponsors">
         <h1 className="past-sponsors-text">Past Sponsors</h1>
         <div class="grid-container">
           <div class="grid-item">
             <img src={CC} />
           </div>
-          <div class="grid-item"></div>
-          <div class="grid-item"></div>
-          <div class="grid-item"></div>
-          <div class="grid-item"></div>
-          <div class="grid-item"></div>
+          <div class="grid-item">
+            <img src={P} />
+          </div>
+          <div class="grid-item">
+            <img src={SP} />
+          </div>
+          <div class="grid-item">
+            <img src={JB} />
+          </div>
+          <div class="grid-item">
+            <img src={IX} />
+          </div>
+          <div class="grid-item">
+            <img src={SC} />
+          </div>
         </div>
       </div>
       <div className="registration">
