@@ -14,6 +14,7 @@ import SC from "../Images/snapchat.png";
 import SP from "../Images/spotify.png";
 import IX from "../Images/ixigo.png";
 import JB from "../Images/jetbrains.png";
+import WAVE from "../Images/wave.svg";
 import TwitterIcon from "@material-ui/icons/Twitter";
 import FacebookIcon from "@material-ui/icons/Facebook";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
@@ -36,6 +37,7 @@ function Home() {
     centerPadding: "60px",
     slidesToShow: 3,
     speed: 500,
+    arrows:false,
     responsive: [
       {
         breakpoint: 768,
@@ -43,7 +45,7 @@ function Home() {
           arrows: false,
           centerMode: true,
           centerPadding: "40px",
-          slidesToShow: 3,
+          slidesToShow: 2,
         },
       },
       {
@@ -52,7 +54,7 @@ function Home() {
           arrows: false,
           centerMode: true,
           centerPadding: "40px",
-          slidesToShow: 2,
+          slidesToShow: 1,
         },
       },
     ],
@@ -138,16 +140,17 @@ function Home() {
           </div>
         </div>
         <section>
-          <img src={DL} className="design-left" />
           <div className="col-12">
             <span className="iia">E-Summit 2021</span>
             <span className="vit">by E-cell VIT</span>
           </div>
-          <img src={DR} className="design-right" />
-          <a href="#stats">
+          <a onclick="goto('stats')">
             <div className="scroll-down"></div>
             <div className="scroll-down2"></div>
           </a>
+          <div className="wave">
+            <img className="wavy" src={WAVE} alt="" />
+          </div>
         </section>
       </div>
       <div className="counter" id="stats">
@@ -185,7 +188,8 @@ function Home() {
         </div>
         <div className="esummit">
           <h2 data-aos="fade-up" data-aos-offset="-20" id="a">
-            About ESummit
+            About <br />
+            E-Summit
           </h2>
           <div className="vertical-line"></div>
           <p data-aos="zoom-in" data-aos-offset="-20" id="pa">
