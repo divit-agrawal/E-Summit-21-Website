@@ -21,6 +21,9 @@ import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import InstagramIcon from "@material-ui/icons/Instagram";
 import MailIcon from "@material-ui/icons/Mail";
 import Slider from "react-slick";
+import WAVE from "../Images/wave.svg"
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 function Home() {
   const { countUp: countUp1, start: start1 } = useCountUp({
@@ -29,6 +32,37 @@ function Home() {
     end: "5",
     startOnMount: false,
   });
+
+  // const settings = {
+  //   className: "center",
+  //   centerMode: true,
+  //   infinite: true,
+  //   autoplay: true,
+  //   centerPadding: "60px",
+  //   slidesToShow: 3,
+  //   speed: 500,
+  //   responsive: [
+  //     {
+  //       breakpoint: 768,
+  //       settings: {
+  //         arrows: false,
+  //         centerMode: true,
+  //         centerPadding: "40px",
+  //         slidesToShow: 3,
+  //       },
+  //     },
+  //     {
+  //       breakpoint: 480,
+  //       settings: {
+  //         arrows: false,
+  //         centerMode: true,
+  //         centerPadding: "40px",
+  //         slidesToShow: 2,
+  //       },
+  //     },
+  //   ],
+  // };
+
   const settings = {
     className: "center",
     centerMode: true,
@@ -59,6 +93,7 @@ function Home() {
       },
     ],
   };
+
 
   const { countUp: countUp2, start: start2 } = useCountUp({
     start: "0",
@@ -102,6 +137,85 @@ function Home() {
     Aos.init({ duration: "1000" });
   }, []);
 
+
+
+  const config = {
+    dots: true,
+    infinite: true,
+    // arrows : false,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
+  };
+
+  const [settings, setSettings] = useState(config);
+
+  const products = [
+    {
+      img: {JB},
+      title: 'Dolore magna',
+      text: 'Lorem ipsum dolor sit amet elit ipsum.'
+    },
+    {
+      img: '/images/product2.jpg',
+      title: 'Eget est lorem',
+      text: 'Lorem Ipsum adipiscing elit ipsum.'
+    },
+    {
+      img: '/images/product3.jpg',
+      title: 'Tempus imperdiet',
+      text: 'Orci porta non pulvinar neque laoreet.'
+    },
+    {
+      img: '/images/product4.jpg',
+      title: 'Mattis rhoncus',
+      text: 'Bibendum neque egestas congue quisque.'
+    },
+    {
+      img: '/images/product5.jpg',
+      title: 'Odio ut enim',
+      text: 'Mattis rhoncus urna neque viverra justo.'
+    }
+  ]
+
+  // const onChangeCenterMode = e => {
+  //   if (e.target.checked) {
+  //     setSettings({
+  //       ...config,
+  //       centerMode: true,
+  //       centerPadding: '50px'
+  //     });
+  //   } else {
+  //     setSettings(config);
+  //   }
+  // }
+
   return (
     <div className="container">
       <div className="landing" id="home">
@@ -144,12 +258,12 @@ function Home() {
             <span className="iia">E-Summit 2021</span>
             <span className="vit">by E-cell VIT</span>
           </div>
-          <a onclick="goto('stats')">
-            <div className="scroll-down"></div>
+          <a href="#stats">
+          <div className="scroll-down"></div>
             <div className="scroll-down2"></div>
           </a>
           <div className="wave">
-            <img className="wavy" src={WAVE} alt="" />
+            <img className="wavy" src={WAVE} alt=""/>
           </div>
         </section>
       </div>
@@ -188,8 +302,11 @@ function Home() {
         </div>
         <div className="esummit">
           <h2 data-aos="fade-up" data-aos-offset="-20" id="a">
+           
+
             About <br />
             E-Summit
+
           </h2>
           <div className="vertical-line"></div>
           <p data-aos="zoom-in" data-aos-offset="-20" id="pa">
@@ -304,16 +421,22 @@ function Home() {
         </div>
       </div>
 
-      {/* <div className="image-slider">
+      <div className="image-slider">
+      <div className="slide-wrap">
         <Slider {...settings}>
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-        </Slider>
-      </div> */}
+          {products.map((x, i) => {
+            return( 
+            <div key={i} className="img-card">
+              <img className="img" src={x.img} />
+              <div class="card-body">
+                <div className="card-title">{x.title}</div>
+                <div className="card-text">{x.text}</div>
+              </div>
+          </div>
+          )})}
+      </Slider>
+      </div>
+      </div>
 
       <div className="past-sponsors" id="sponsors">
         <h1 className="past-sponsors-text">Past Sponsors</h1>
