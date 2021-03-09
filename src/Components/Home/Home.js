@@ -14,6 +14,7 @@ import SC from "../Images/snapchat.png";
 import SP from "../Images/spotify.png";
 import IX from "../Images/ixigo.png";
 import JB from "../Images/jetbrains.png";
+import WAVE from "../Images/wave.svg";
 import TwitterIcon from "@material-ui/icons/Twitter";
 import FacebookIcon from "@material-ui/icons/Facebook";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
@@ -31,6 +32,7 @@ function Home() {
     end: "5",
     startOnMount: false,
   });
+
   // const settings = {
   //   className: "center",
   //   centerMode: true,
@@ -60,6 +62,38 @@ function Home() {
   //     },
   //   ],
   // };
+
+  const settings = {
+    className: "center",
+    centerMode: true,
+    infinite: true,
+    autoplay: true,
+    centerPadding: "60px",
+    slidesToShow: 3,
+    speed: 500,
+    arrows:false,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          arrows: false,
+          centerMode: true,
+          centerPadding: "40px",
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          arrows: false,
+          centerMode: true,
+          centerPadding: "40px",
+          slidesToShow: 1,
+        },
+      },
+    ],
+  };
+
 
   const { countUp: countUp2, start: start2 } = useCountUp({
     start: "0",
@@ -268,7 +302,11 @@ function Home() {
         </div>
         <div className="esummit">
           <h2 data-aos="fade-up" data-aos-offset="-20" id="a">
-            About<br></br>E-Summit
+           
+
+            About <br />
+            E-Summit
+
           </h2>
           <div className="vertical-line"></div>
           <p data-aos="zoom-in" data-aos-offset="-20" id="pa">
